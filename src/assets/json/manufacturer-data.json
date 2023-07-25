@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "manufacturer_name": "Rexroths",
+    "manufacturer_description": "Bosch Rexroth manufactures products and systems associated with the control and motion of industrial and mobile equipment."
+  },
+  {
+    "id": 2,
+    "manufacturer_name": "Eaton",
+    "manufacturer_description": "Eaton manufactures products and systems associated with the control and motion of industrial and mobile equipment."
+  },
+  {
+    "id": 3,
+    "manufacturer_name": "Kawasaki",
+    "manufacturer_description": "Kawasaki manufactures products and systems associated with the control and motion of industrial and mobile equipment."
+  },
+  {
+    "id": 4,
+    "manufacturer_name": "Danfoss",
+    "manufacturer_description": "Danfoss manufactures products and systems associated with the control and motion of industrial and mobile equipment."
+  },
+  {
+    "id": 5,
+    "manufacturer_name": "Enerpac",
+    "manufacturer_description": "Enerpac manufactures products and systems associated with the control and motion of industrial and mobile equipment."
+  },
+  {
+    "id": 6,
+    "manufacturer_name": "Linde",
+    "manufacturer_description": "Linde manufactures products and systems associated with the control and motion of industrial and mobile equipment."
+  },
+  {
+    "id": 7,
+    "manufacturer_name": "Parker",
+    "manufacturer_description": "Parker manufactures products and systems associated with the control and motion of industrial and mobile equipment."
+  },
+  {
+    "id": 8,
+    "manufacturer_name": "Services",
+    "manufacturer_description": "We provide highest quality services to satisfy our customers"
+  }
+]

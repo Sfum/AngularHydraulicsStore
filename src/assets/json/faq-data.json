@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "faq_name": "John Smith",
+    "faq_question": "What are the common issues with hydraulic pumps?",
+    "faq_answer": "Common issues with hydraulic pumps include fluid leaks, loss of pressure, and abnormal noise."
+  },
+  {
+    "id": 2,
+    "faq_name": "Emma Johnson",
+    "faq_question": "How often should I have my hydraulic pump serviced?",
+    "faq_answer": "Regular maintenance is recommended, and the frequency depends on the pump's usage. Generally, it's advised to have it serviced annually."
+  },
+  {
+    "id": 3,
+    "faq_name": "Michael Williams",
+    "faq_question": "What are the signs that my hydraulic motor needs repair?",
+    "faq_answer": "Signs indicating the need for hydraulic motor repair include decreased performance, excessive heat, and unusual vibrations."
+  },
+  {
+    "id": 4,
+    "faq_name": "Sophia Brown",
+    "faq_question": "Can I perform hydraulic pump repairs myself?",
+    "faq_answer": "Hydraulic pump repairs require specialized knowledge and tools. It is recommended to seek professional assistance for proper repairs."
+  },
+  {
+    "id": 5,
+    "faq_name": "Daniel Taylor",
+    "faq_question": "How long does a typical hydraulic pump repair take?",
+    "faq_answer": "The duration of hydraulic pump repairs can vary depending on the complexity of the issue. Simple repairs may take a few hours, while extensive repairs might require several days."
+  },
+  {
+    "id": 6,
+    "faq_name": "Olivia Davis",
+    "faq_question": "What is the cost of hydraulic pump repair?",
+    "faq_answer": "The cost of hydraulic pump repair depends on the extent of the damage and the specific components that need to be repaired or replaced. It is best to consult a repair service for an accurate estimate."
+  },
+  {
+    "id": 7,
+    "faq_name": "Matthew Wilson",
+    "faq_question": "Can I prevent hydraulic pump failure?",
+    "faq_answer": "Proper maintenance, regular inspections, and addressing any issues promptly can help prevent hydraulic pump failure."
+  },
+  {
+    "id": 8,
+    "faq_name": "Emily Moore",
+    "faq_question": "Are there any specific precautions during hydraulic motor repairs?",
+    "faq_answer": "When repairing hydraulic motors, it is essential to follow safety guidelines, use the correct tools, and ensure the system is depressurized to avoid accidents."
+  },
+  {
+    "id": 9,
+    "faq_name": "David Anderson",
+    "faq_question": "What is the recommended oil for hydraulic pumps and motors?",
+    "faq_answer": "The recommended oil type depends on the specific pump or motor. It is best to refer to the manufacturer's guidelines or consult a hydraulic specialist for the appropriate oil."
+  },
+  {
+    "id": 10,
+    "faq_name": "Emma Wilson",
+    "faq_question": "Can I rebuild a hydraulic pump instead of replacing it?",
+    "faq_answer": "In some cases, hydraulic pumps can be rebuilt by replacing worn-out components. A professional hydraulic repair service can assess if a rebuild is feasible for your pump."
+  }
+]

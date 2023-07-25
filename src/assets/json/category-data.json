@@ -1,0 +1,45 @@
+[
+  {
+    "id": 1,
+    "category_name": "Pumps Valves",
+    "category_image": "https://rembconnect.be/content/files/images/Categories/Danfoss/spv.jpg",
+    "category_description": "Hydraulic pumps convert mechanical power into hydraulic energy, driving fluid flow and pressure in a system. They enable force transmission to actuators and come in different types, such as gear, vane, and piston pumps."
+
+  },
+  {
+    "id": 2,
+    "category_name": "Valves",
+    "category_image": "https://rembconnect.be/content/files/images/Categories/Danfoss/spv.jpg",
+    "category_description": "Hydraulic valves regulate fluid flow, direction, and pressure in a system. They control the movement and functionality of actuators, offering precise force control. Valves include directional, pressure, flow, and proportional types."
+  },
+  {
+    "id": 3,
+    "category_name": "Elements",
+    "category_image": "https://rembconnect.be/content/files/images/Categories/Danfoss/spv.jpg",
+    "category_description": "Hydraulic elements are components like cylinders, motors, hoses, fittings, and reservoirs that form a complete hydraulic system. They work together to generate, control, and utilize hydraulic power, contributing to system performance."
+  },
+  {
+    "id": 4,
+    "category_name": "Cartridges",
+    "category_image": "https://rembconnect.be/content/files/images/Categories/Danfoss/spv.jpg",
+    "category_description": "Hydraulic cartridges are compact valve units inserted into manifold blocks or cavities. They provide a space-saving and efficient solution, containing all necessary valve components in a single unit."
+  },
+  {
+    "id": 5,
+    "category_name": "Filter",
+    "category_image": "https://rembconnect.be/content/files/images/Categories/Danfoss/spv.jpg",
+    "category_description": "Hydraulic filters remove contaminants from fluid, ensuring system cleanliness and longevity. They prevent damage to components and are installed at various points in the system."
+  },
+  {
+    "id": 6,
+    "category_name": "OEM",
+    "category_image": "https://rembconnect.be/content/files/images/Categories/Danfoss/spv.jpg",
+    "category_description": "OEM refers to parts manufactured by the original equipment manufacturer. They are designed to meet specific standards, ensuring compatibility, reliability, and optimal performance."
+  },
+  {
+    "id": 7,
+    "category_name": "Piston",
+    "category_image": "https://rembconnect.be/content/files/images/Categories/Danfoss/spv.jpg",
+    "category_description": "Pistons move within cylinders, converting fluid pressure into linear or rotary motion. They are crucial for generating force, controlling motion, and transmitting power in hydraulic systems."
+  }
+]
