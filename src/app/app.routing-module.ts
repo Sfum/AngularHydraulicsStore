@@ -4,7 +4,7 @@ import {RouterModule, Routes} from "@angular/router";
 import {ProductCardRoutingModule} from "./components/product-card/product-card.routing-module";
 
 const routes: Routes = [
-  // {path: '', pathMatch: 'full', component: },
+  {path: '', pathMatch: 'full', redirectTo: 'products' },
   {
     path: 'products',
     loadChildren: () => import('./components/product-card/product-card.module').then(x => x.ProductCardModule)

@@ -1,0 +1,46 @@
+
+<div class="header">
+  <div class="header__upper-part">
+    <div class="header__upper-part-left">
+      <mat-icon class="header__upper-part-left--icon">phone</mat-icon>
+      <div class="header__upper-part-left--field">Contact: 088710320</div>
+      <div class="header__upper-part-left--field"></div>
+    </div>
+    <div class="header__upper-part-right">
+      <div class="header__upper-part-right--icon"><mat-icon>language</mat-icon></div>
+      <div class="header__upper-part-right--icon"><mat-icon>shopping_cart</mat-icon></div>
+      <div class="header__upper-part-right--icon"><mat-icon>account_circle</mat-icon></div>
+      <mat-toolbar color="black">
+        <mat-button-toggle-group>
+          <a mat-button routerLink="/category">Category</a>
+          <a mat-button routerLink="/login">Login</a>
+          <a mat-button routerLink="/faq">FAQ</a>
+          <a mat-button routerLink="/payment">Payment</a>
+          <a mat-button routerLink="/contact">Contact</a>
+          <a mat-button routerLink="/blog">Blog</a>
+          <a mat-button routerLink="/shopping-cart">Shopping Cart</a>
+          <a mat-button routerLink="/wishlist">Wishlist</a>
+        </mat-button-toggle-group>
+      </mat-toolbar>
+
+    </div>
+  </div>
+  <div class="header__middle-part">
+    <img class="header__middle-part-left" src="https://mmhydraulic.info/images/mmhydraulic_logo_1.0.png" >
+    <mat-form-field class="header__middle-part-right"><input matInput placeholder="Search..."></mat-form-field>
+  </div>
+  <div class="header__bottom-part" >
+    <button mat-raised-button
+            class="header__bottom-part--button"
+            (click)="onManufacturerSelect(-1)"
+    >All</button>
+    <button mat-raised-button
+            class="header__bottom-part--button"
+            *ngFor="let manufacturer of manufacturerList$ | async;
+            let selectedManufacturerId = index"
+            (click)="onManufacturerSelect(selectedManufacturerId)"
+            [value]="manufacturer.id">
+      {{manufacturer.manufacturer_name}}</button>
+  </div>
+</div>
+

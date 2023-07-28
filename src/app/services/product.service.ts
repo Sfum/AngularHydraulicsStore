@@ -1,15 +1,25 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {Product} from "../models/product";
-import {combineLatest, map, shareReplay, tap} from "rxjs";
+import {BehaviorSubject, combineLatest, map, Observable, shareReplay, tap} from "rxjs";
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {ManufacturerService} from "./manufacturer.service";
 import {CategoryService} from "./category.service";
 import {ModelService} from "./model.service";
+import {Manufacturer} from "../models/manufacturer";
+import {Category} from "../models/category";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
+  MOCK_URL = 'assets/json/product-data.json';
+
+  products$ = this.httpClient
+    .get<Product[]>(this.MOCK_URL)
+    .pipe(tap((data) => console.log('Product: ', JSON.stringify)));
+
+  httpHeaders = new HttpHeaders().set('Content-Type', 'application/json');
+
 
   manufacturers$ = this.manufacturerService.manufacturers$
   categories$ = this.categoryService.categories$
@@ -21,16 +31,46 @@ export class ProductService {
               private modelService: ModelService) {
   }
 
-  MOCK_URL = 'assets/json/product-data.json';
+  manufacturerFilter(manufacturer: Manufacturer) {
+    this.categorySelectedSubject.next(0);
+    this.manufacturerSelectedSubject.next(0);
+    this.manufacturerSelectedSubject.next(+manufacturer);
+  }
 
-  products$ = this.httpClient
-    .get<Product[]>(this.MOCK_URL)
-    .pipe(tap((data) => console.log('Product: ', JSON.stringify)));
+  categoryFilter(category: Category) {
+    this.manufacturerSelectedSubject.next(0);
+    this.categorySelectedSubject.next(0);
+    this.categorySelectedSubject.next(+category);
+  }
 
-  httpHeaders = new HttpHeaders().set('Content-Type', 'application/json');
+  public categorySelectedSubject = new BehaviorSubject<number>(0);
+  categorySubject$ = this.categorySelectedSubject.asObservable();
+
+  public manufacturerSelectedSubject = new BehaviorSubject<number>(0);
+  manufacturerSubject$ = this.manufacturerSelectedSubject.asObservable();
+
+  categoryStream$ = combineLatest([
+    this.products$,
+    this.categorySubject$,
+  ]).pipe(
+    map(([products, category]) =>
+      products.filter((product) =>
+        category ? product.categoryId == category: true
+      )
+    ));
+
+  manufacturerStream$ = combineLatest([
+    this.categoryStream$,
+    this.manufacturerSubject$,
+  ]).pipe(
+    map(([products, manufacturer]) =>
+      products.filter((product) =>
+        manufacturer ? product.manufacturerId == manufacturer : true
+      )
+    ));
 
   productStreamFiltered$ = combineLatest([
-    this.products$,
+    this.manufacturerStream$,
     this.manufacturers$,
     this.categories$,
     this.models$
@@ -53,5 +93,32 @@ export class ProductService {
     shareReplay(1)
   );
 
+  filteredProductsFetch$ = combineLatest([
+    this.productStreamFiltered$,
+    this.manufacturers$,
+    this.categories$,
+    this.models$,
+  ]).pipe(
+    map(([products, manufacturers, categories, models]) => ({
+        products,
+        manufacturers,
+        categories,
+        models
+      })
+    )
+  )
+
+  GetProducts() {
+    return this.httpClient.get(`${this.MOCK_URL}`);
+  }
+
+  GetProduct(id: any): Observable<any> {
+    let API_URL = `${this.MOCK_URL}/product/${id}`;
+    return this.httpClient.get(API_URL, { headers: this.httpHeaders }).pipe(
+      map((res: any) => {
+        return res || {};
+      })
+    );
+  }
 
 }

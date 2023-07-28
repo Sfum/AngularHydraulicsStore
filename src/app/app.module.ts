@@ -10,12 +10,18 @@ import {MatButtonModule} from "@angular/material/button";
 import {AppRoutingModule} from "./app.routing-module";
 import {ProductCardModule} from "./components/product-card/product-card.module";
 import {HttpClientModule} from "@angular/common/http";
+import {RouterLink, RouterOutlet} from "@angular/router";
+import { HeaderComponent } from './shared/header/header.component';
+import {MatToolbarModule} from "@angular/material/toolbar";
+import {MatButtonToggleModule} from "@angular/material/button-toggle";
+import {MatInputModule} from "@angular/material/input";
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductCardComponent,
-    ProductCardDetailComponent
+    ProductCardDetailComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +30,12 @@ import {HttpClientModule} from "@angular/common/http";
     MatButtonModule,
     HttpClientModule,
     AppRoutingModule,
-    ProductCardModule
+    ProductCardModule,
+    RouterOutlet,
+    MatToolbarModule,
+    MatButtonToggleModule,
+    RouterLink,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
