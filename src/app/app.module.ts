@@ -1,14 +1,15 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
-import { ProductCardComponent } from './components/product-card/product-card.component';
-import { ProductCardDetailComponent } from './components/product-card/product-card-detail/product-card-detail.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {AppComponent} from './app.component';
+import {ProductCardComponent} from './components/product-card/product-card.component';
+import {ProductCardDetailComponent} from './components/product-card/product-card-detail/product-card-detail.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
-
-import { HttpClientModule} from "@angular/common/http";
+import {AppRoutingModule} from "./app.routing-module";
+import {ProductCardModule} from "./components/product-card/product-card.module";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -21,9 +22,12 @@ import { HttpClientModule} from "@angular/common/http";
     BrowserAnimationsModule,
     MatIconModule,
     MatButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule,
+    ProductCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
