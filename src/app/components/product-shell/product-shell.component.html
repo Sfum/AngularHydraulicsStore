@@ -1,0 +1,15 @@
+<div class="product-shell__view-toggle">
+  <mat-button-toggle-group [(ngModel)]="selectedComponent" name="componentToggle">
+    <mat-button-toggle value="componentA">Product Grid</mat-button-toggle>
+    <mat-button-toggle value="componentB">Product List</mat-button-toggle>
+  </mat-button-toggle-group>
+
+  <div [ngSwitch]="selectedComponent">
+    <ng-container *ngSwitchCase="'componentA'">
+      <app-product-card></app-product-card>
+    </ng-container>
+    <ng-container class="product-shell__view-table" *ngSwitchCase="'componentB'">
+      <app-product-table></app-product-table>
+    </ng-container>
+  </div>
+</div>

@@ -11,17 +11,27 @@ import {AppRoutingModule} from "./app.routing-module";
 import {ProductCardModule} from "./components/product-card/product-card.module";
 import {HttpClientModule} from "@angular/common/http";
 import {RouterLink, RouterOutlet} from "@angular/router";
-import { HeaderComponent } from './shared/header/header.component';
+import {HeaderComponent} from './shared/header/header.component';
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatButtonToggleModule} from "@angular/material/button-toggle";
 import {MatInputModule} from "@angular/material/input";
+import {ProductFilterComponent} from './components/product-filter/product-filter.component';
+import {
+  ProductFilterDetailComponent
+} from './components/product-filter/product-filter-detail/product-filter-detail.component';
+import {MatSelectModule} from "@angular/material/select";
+import {FormsModule} from "@angular/forms";
+import {ProductShellComponent} from './components/product-shell/product-shell.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductCardComponent,
     ProductCardDetailComponent,
-    HeaderComponent
+    HeaderComponent,
+    ProductFilterComponent,
+    ProductFilterDetailComponent,
+    ProductShellComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +45,9 @@ import {MatInputModule} from "@angular/material/input";
     MatToolbarModule,
     MatButtonToggleModule,
     RouterLink,
-    MatInputModule
+    MatInputModule,
+    MatSelectModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

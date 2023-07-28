@@ -1,0 +1,35 @@
+.product-grid
+  display: grid
+  grid-template-columns: 20% 80%
+  padding: 40px
+  margin-top: 20px
+  min-width: 220px
+
+  &--sidebar
+    grid-column: 1/2y
+    font-size: 18px
+    display: grid
+    grid-template-rows: 30px 30px auto
+
+    &-manufacturer
+      grid-row: 1/2
+      width: 200px
+
+    &-category
+      width: 200px
+      grid-row: 2/3
+
+  &--product-grid
+    grid-column: 2/3
+    font-size: 18px
+    padding: 40px
+    display: flex
+    flex-direction: row
+
+  &--product-card
+    margin: 10px
+
+table
+  width: 100%
+
+

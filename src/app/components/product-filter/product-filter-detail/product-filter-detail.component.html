@@ -1,0 +1,32 @@
+<div class="product-grid">
+  <div class="product-grid__header">
+    <mat-form-field class="product-grid--sidebar-manufacturer" appearance="fill"
+                    *ngIf="manufacturer$ | async as manufacturer">
+      <mat-label>Filter by manufacturer</mat-label>
+      <mat-select
+        (selectionChange)="manufacturerFilterItems($any($event.value))">
+        <mat-option value="0">- All manufacturers -</mat-option>
+        <mat-option
+          *ngFor="let manufacturer of manufacturer"
+          [value]="manufacturer.id">
+          {{ manufacturer.manufacturer_name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="product-grid--sidebar-category" appearance="fill" *ngIf="category$ | async as category">
+      <mat-label>Filter by category</mat-label>
+      <mat-select
+        (selectionChange)="categoryFilterItems($any($event.value))">
+        <mat-option value="0">- All categories -</mat-option>
+        <mat-option
+          *ngFor="let category of category"
+          [value]="category.id">
+          {{ category.category_name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div class="product-grid--product-grid">
+      <app-product-card-detail class="product-grid__header--product-card"></app-product-card-detail>
+    </div>
+  </div>
+</div>

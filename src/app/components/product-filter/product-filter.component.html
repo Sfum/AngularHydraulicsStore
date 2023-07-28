@@ -1,0 +1,6 @@
+<app-product-filter-detail
+  [category]="selectedCategory"
+  [manufacturer]="selectedManufacturer"
+  (onFilterManufacturerChange)="manufacturerFilterItems($event)"
+  (onFilterCategoryChange)="categoryFilterItems($event)"
+></app-product-filter-detail>

@@ -9,6 +9,7 @@ import {MatTableModule} from "@angular/material/table";
 import {MatButtonModule} from "@angular/material/button";
 import {MatInputModule} from "@angular/material/input";
 import {MatSortModule} from "@angular/material/sort";
+import { ProductTableComponent } from './product-table/product-table.component';
 
 @NgModule({
   imports: [
@@ -23,10 +24,13 @@ import {MatSortModule} from "@angular/material/sort";
     MatSortModule
   ],
   exports: [
+    ProductTableComponent
 
   ],
   declarations: [
 
+
+    ProductTableComponent
   ]
 })
 export class ProductCardModule {
