@@ -1,0 +1,14 @@
+<mat-card class="category__card" *ngIf="category">
+  <div class="category__card-image">
+    <img [src]="category.category_image" width="180px" alt="">
+  </div>
+  <div class="category__card-content">
+    <div class="category__card-label">
+      {{category.category_name}}
+    </div>
+    <div class="category__card-text">
+      {{category.category_description}}
+    </div>
+  </div>
+</mat-card>
+

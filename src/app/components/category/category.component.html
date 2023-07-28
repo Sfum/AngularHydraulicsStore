@@ -1,0 +1,6 @@
+<div class="category__grid">
+
+  <app-category-detail class="container__category"
+                       *ngFor="let category of categoryFetched$
+                     | async" [category]="category"></app-category-detail>
+</div>

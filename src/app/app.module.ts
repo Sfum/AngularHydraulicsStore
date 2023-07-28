@@ -22,6 +22,9 @@ import {
 import {MatSelectModule} from "@angular/material/select";
 import {FormsModule} from "@angular/forms";
 import {ProductShellComponent} from './components/product-shell/product-shell.component';
+import { CategoryComponent } from './components/category/category.component';
+import { CategoryDetailComponent } from './components/category/category-detail/category-detail.component';
+import {MatCardModule} from "@angular/material/card";
 
 @NgModule({
   declarations: [
@@ -31,7 +34,9 @@ import {ProductShellComponent} from './components/product-shell/product-shell.co
     HeaderComponent,
     ProductFilterComponent,
     ProductFilterDetailComponent,
-    ProductShellComponent
+    ProductShellComponent,
+    CategoryComponent,
+    CategoryDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +52,8 @@ import {ProductShellComponent} from './components/product-shell/product-shell.co
     RouterLink,
     MatInputModule,
     MatSelectModule,
-    FormsModule
+    FormsModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
