@@ -3,6 +3,8 @@ import {CommonModule} from '@angular/common';
 import {RouterModule, Routes} from "@angular/router";
 import {CategoryComponent} from "./components/category/category.component";
 import {ProductCardRoutingModule} from "./components/product-card/product-card.routing-module";
+import {FaqComponent} from "./components/faq/faq.component";
+import {WishlistComponent} from "./components/wishlist/wishlist.component";
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: 'products' },
@@ -11,6 +13,9 @@ const routes: Routes = [
     loadChildren: () => import('./components/product-card/product-card.module').then(x => x.ProductCardModule)
   },
   {path: 'category', component: CategoryComponent},
+  {path: 'faq', component: FaqComponent},
+  {path: 'wishlist', component: WishlistComponent},
+
 
 ]
 

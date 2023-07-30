@@ -25,6 +25,12 @@ import {ProductShellComponent} from './components/product-shell/product-shell.co
 import { CategoryComponent } from './components/category/category.component';
 import { CategoryDetailComponent } from './components/category/category-detail/category-detail.component';
 import {MatCardModule} from "@angular/material/card";
+import { FaqComponent } from './components/faq/faq.component';
+import {MatExpansionModule} from "@angular/material/expansion";
+import { FaqDetailComponent } from './components/faq/faq-detail/faq-detail.component';
+import { WishlistComponent } from './components/wishlist/wishlist.component';
+import { WishlistDetailComponent } from './components/wishlist/wishlist-detail/wishlist-detail.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -36,7 +42,11 @@ import {MatCardModule} from "@angular/material/card";
     ProductFilterDetailComponent,
     ProductShellComponent,
     CategoryComponent,
-    CategoryDetailComponent
+    CategoryDetailComponent,
+    FaqComponent,
+    FaqDetailComponent,
+    WishlistComponent,
+    WishlistDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +63,9 @@ import {MatCardModule} from "@angular/material/card";
     MatInputModule,
     MatSelectModule,
     FormsModule,
-    MatCardModule
+    MatCardModule,
+    MatExpansionModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

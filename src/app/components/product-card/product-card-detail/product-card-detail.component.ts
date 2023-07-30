@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {Product} from "../../../models/product";
 
 @Component({
@@ -10,6 +10,12 @@ export class ProductCardDetailComponent {
 
   @Input()
   product: Product | undefined;
+
+  @Output() onWishlistEvent: EventEmitter<Product> = new EventEmitter<Product>();
+
+  onWishlistClicked(product: Product) {
+    this.onWishlistEvent.emit(product);
+  }
 
 
 }

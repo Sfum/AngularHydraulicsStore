@@ -1,4 +1,5 @@
 <div class="product-card" >
   <app-product-card-detail class="product-card-view" *ngFor="let product of productStream$ | async; index as i"
+                           (onWishlistEvent)="onAddToWishlistClick($event)"
                            [product]="product"></app-product-card-detail>
 </div>
