@@ -1,29 +1,17 @@
-<div class="wishlist__title-label">
-  <div class="font-primary margin-label font-label">Wishlist</div>
-  <button
-    class="wishlist__button"
-    mat-raised-button
-    (click)="onClickBack()"
-    type="button"
-  >
-    Back
-  </button>
-</div>
+<mat-card class="wishlist__items"
+          *ngFor="let product of products; let i = index">
 
-<div class="wishlist__container">
-  <mat-card class="wishlist__items--container"
-            *ngFor="let product of products; let i = index">
-    <div>
-      <img class="wishlist__image"
-           [src]="product.product_image"
-           width="120"
-           alt=""/>
-    </div>
-    <div>
-      <div class="wishlist__title font-primary">{{ product.product_name }}</div>
-      <div class="wishlist__subtitle font-secondary">{{ product.manufacturerId }}</div>
-    </div>
-    <div class="wishlist__icon-field">
+  <img class="wishlist__items-image"
+       [src]="product.product_image"
+       width="120"
+       alt=""/>
+
+  <div class="wishlist__items-info">
+
+    <div class="wishlist__items-info-title font-primary">{{ product.product_name }}</div>
+    <div class="wishlist__items-info-subtitle font-secondary">{{ product.manufacturerId }}</div>
+
+    <div class="wishlist__items-info-icon">
       <mat-icon
         class="wishlist__card--icon"
         [routerLink]="['/products/product-detail', product.id]"
@@ -32,6 +20,7 @@
 
       <ng-template #reMindMe>
         <mat-icon class="wishlist__card--icon">list</mat-icon>
+        <mat-icon class="wishlist__items-info-icon-field">list</mat-icon>
       </ng-template>
       <mat-icon
         class="wishlist__card--icon"
@@ -43,8 +32,8 @@
       <mat-icon class="wishlist__card--icon"> phone</mat-icon>
     </div>
 
-    <div class="wishlist__card_label font-label">
-      ${{ product.quantity * product.price | number : "1.2-2" }}
+    <div class="wishlist__items-card_label font-label">
+      <!--      ${{ product.quantity * product.price | number : "1.2-2" }}-->
     </div>
 
     <div class="wishlist__remove">
@@ -56,5 +45,5 @@
         Remove
       </button>
     </div>
-  </mat-card>
-</div>
+  </div>
+</mat-card>

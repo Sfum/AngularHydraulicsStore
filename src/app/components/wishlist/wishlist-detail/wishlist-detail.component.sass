@@ -1,62 +1,28 @@
+@import 'src/styles.sass'
 
-.wishlist__items--container
+.wishlist__items
   display: grid
-  grid-template-columns: 40% 60%
-  grid-template-rows: 30px 30px 30px 30px
-  margin: 40px auto 40px
+  grid-template-columns: 0.4fr 0.6fr
   padding: 30px
-  height: 160px
-  width: 700px
-  border-radius: var(--border-radius-sm)
+  height: 220px
+  margin-bottom: 10px
+  &-image
+    grid-column: 1/2
+    border-radius: 50%
+    margin: 30px
 
-
-.wishlist__container
-  margin: var(--margin-xlg)
-  height: 100vh
-
-
-.wishlist__title-label
-  margin: 0 300px 0
-
-
-.wishlist__image
-  grid-area: product-image
-  height: 100px
-  margin: auto
-
-
-.wishlist__title
-  grid-area: product-name
-
-
-.wishlist__subtitle
-  margin-top: var(--margin-xsm)
-
-
-.wishlist__icon-field
-  margin: 0 0 30px
-  position: absolute
-  top: 78px
-  left: 283px
-
-
-.wishlist__card--icon
-  padding: 3px
-
-
-.wishlist__card_label
-  font-size: 28px
-  position: absolute
-  right: 3rem
-  bottom: 4.2rem
-
-
-.wishlist__remove
-  grid-area: remove-from-card
-  min-height: 100px
-
-
-.wishlist__button
-  margin: var(--margin-sm)
-  width: 130px
-
+  &-info
+    grid-column: 2/3
+    &-title
+      @include productName
+      margin: 0 0 3px
+    &-subtitle
+      @include manufacturerName
+      margin: 0 0 3px
+    &-icon
+      margin: 5px 0 5px
+      &-field
+        margin: 10px
+  &-card_label
+    font-size: 22px
+    margin: 10px 0 10px 10px

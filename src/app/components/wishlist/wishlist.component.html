@@ -1,5 +1,6 @@
-<app-wishlist-detail *ngIf="products$" [products]="products"
+<div class="wishlist__wrapper">
+  <app-wishlist-detail class="wishlist__wrapper-card" *ngIf="products$" [products]="products"
 
-
-                     (removeWishlistEvent)="removeFromWishlist($event)"
-></app-wishlist-detail>
+                       (removeWishlistEvent)="removeFromWishlist($event)"
+  ></app-wishlist-detail>
+</div>
