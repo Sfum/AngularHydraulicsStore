@@ -1,0 +1,41 @@
+<mat-card class="cart"
+          *ngFor="let product of products; let i = index">
+
+  <div class="cart__column-one">
+    <img class="cart__column-one--product-image"
+         [src]="product.product_image"
+         width="120"
+         alt=""/>
+  </div>
+  <div class="cart__column-two">
+  <div class="cart__column-two--label">
+    <div class="cart__column-two--label-primary">{{ product.product_name }}</div>
+    <div class="cart__column-two--label-secondary">{{ product.manufacturerId }}</div>
+  </div>
+  <div class="cart__column-two--quantity-label">
+    <input [(ngModel)]="product.quantity"
+           [ngModelOptions]="{ standalone: true }"
+           min="1"
+           type="number"
+           value="1"/>
+  </div>
+  <div class="cart__column-two--price-amount">
+    ${{ product.quantity * product.price | number : "1.2-2" }}
+  </div>
+  <div class="cart__column-two--price-label">
+    ${{ product.price | number : "1.2-2" }} each
+    </div>
+  <div class="cart__column-two--remove-product">
+    <button mat-raised-button color="warn"
+            class="cart__column-two--remove-button"
+            (click)="removeFromCart(product)">
+      <mat-icon>delete_forever</mat-icon>
+    </button>
+    <button mat-raised-button
+            class="cart__column-two--wishlist-button"
+            (click)="addToWishlist(product)">
+      <mat-icon>favorite_border</mat-icon>
+    </button>
+  </div>
+  </div>
+</mat-card>

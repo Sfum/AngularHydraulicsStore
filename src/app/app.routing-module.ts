@@ -5,6 +5,7 @@ import {CategoryComponent} from "./components/category/category.component";
 import {ProductCardRoutingModule} from "./components/product-card/product-card.routing-module";
 import {FaqComponent} from "./components/faq/faq.component";
 import {WishlistComponent} from "./components/wishlist/wishlist.component";
+import {ShoppingCartComponent} from "./components/shopping-cart/shopping-cart.component";
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: 'products' },
@@ -15,8 +16,7 @@ const routes: Routes = [
   {path: 'category', component: CategoryComponent},
   {path: 'faq', component: FaqComponent},
   {path: 'wishlist', component: WishlistComponent},
-
-
+  {path: 'shopping-cart', component: ShoppingCartComponent},
 ]
 
 @NgModule({

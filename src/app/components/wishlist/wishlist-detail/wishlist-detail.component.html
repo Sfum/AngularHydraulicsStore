@@ -22,18 +22,9 @@
         <mat-icon class="wishlist__card--icon">list</mat-icon>
         <mat-icon class="wishlist__items-info-icon-field">list</mat-icon>
       </ng-template>
-      <mat-icon
-        class="wishlist__card--icon"
-        [style.color]="product.quantity == 0 ? 'red' : 'green'"
-      >fiber_manual_record
-      </mat-icon>
       <mat-icon class="wishlist__card--icon">check_circle</mat-icon>
       <mat-icon class="wishlist__card--icon">question_answer</mat-icon>
       <mat-icon class="wishlist__card--icon"> phone</mat-icon>
-    </div>
-
-    <div class="wishlist__items-card_label font-label">
-      <!--      ${{ product.quantity * product.price | number : "1.2-2" }}-->
     </div>
 
     <div class="wishlist__remove">
@@ -43,6 +34,12 @@
         mat-raised-button
         (click)="removeFromWishlist(product)">
         Remove
+      </button>
+      <button
+        class="wishlist__button"
+        mat-raised-button
+        (click)="addProductToCart(product)">
+        Add to cart
       </button>
     </div>
   </div>

@@ -107,11 +107,9 @@ export class ProductService {
       })
     )
   )
-
   GetProducts() {
     return this.httpClient.get(`${this.MOCK_URL}`);
   }
-
   GetProduct(id: any): Observable<any> {
     let API_URL = `${this.MOCK_URL}/product/${id}`;
     return this.httpClient.get(API_URL, { headers: this.httpHeaders }).pipe(
@@ -120,5 +118,4 @@ export class ProductService {
       })
     );
   }
-
 }

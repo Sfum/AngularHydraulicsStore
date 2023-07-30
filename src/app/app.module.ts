@@ -31,6 +31,9 @@ import { FaqDetailComponent } from './components/faq/faq-detail/faq-detail.compo
 import { WishlistComponent } from './components/wishlist/wishlist.component';
 import { WishlistDetailComponent } from './components/wishlist/wishlist-detail/wishlist-detail.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
+import { ShoppingCartDetailComponent } from './components/shopping-cart/shopping-cart-detail/shopping-cart-detail.component';
+import {MatBadgeModule} from "@angular/material/badge";
 
 @NgModule({
   declarations: [
@@ -46,7 +49,9 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     FaqComponent,
     FaqDetailComponent,
     WishlistComponent,
-    WishlistDetailComponent
+    WishlistDetailComponent,
+    ShoppingCartComponent,
+    ShoppingCartDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -65,7 +70,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     FormsModule,
     MatCardModule,
     MatExpansionModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatBadgeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

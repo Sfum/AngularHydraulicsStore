@@ -1,0 +1,16 @@
+
+<div class="cart">
+  <mat-card class="cart__checkout">
+    <h2 class="cart__checkout--price-label">Total Price:</h2>
+    <div class="cart__checkout--price-amount">{{ total | currency }}</div>
+    <hr/>
+    <div>
+      <button mat-raised-button (click)="onCheckout()">Checkout</button>
+    </div>
+  </mat-card>
+  <app-shopping-cart-detail *ngIf="products$" [products]="products"
+                            (removeFromCartEvent)="removeFromCart($event)"
+                            (addToWishListEvent)="addToWishlist($event)"
+  ></app-shopping-cart-detail>
+
+</div>

@@ -1,6 +1,6 @@
 <div class="wishlist__wrapper">
   <app-wishlist-detail class="wishlist__wrapper-card" *ngIf="products$" [products]="products"
-
+                       (addToCartEvent)="addWishListToCart($event)"
                        (removeWishlistEvent)="removeFromWishlist($event)"
   ></app-wishlist-detail>
 </div>

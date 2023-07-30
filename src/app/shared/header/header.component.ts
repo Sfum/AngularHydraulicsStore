@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {ManufacturerService} from "../../services/manufacturer.service";
 import {ProductService} from "../../services/product.service";
 import {Router} from "@angular/router";
@@ -11,7 +11,8 @@ import {Router} from "@angular/router";
 export class HeaderComponent {
   constructor(private manufacturerService: ManufacturerService,
               private productService: ProductService,
-              private router: Router) { }
+              private router: Router) {
+  }
 
   manufacturerList$ = this.manufacturerService.manufacturers$
 

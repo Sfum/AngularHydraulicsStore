@@ -31,4 +31,5 @@ export class WishlistDetailComponent {
   onClickBack() {
     this.location.back();
   }
+
 }
